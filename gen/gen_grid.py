@@ -490,7 +490,6 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 10):
         if is_valid_result(expand_point,M2):
             valid_result.append(M2)
         if len(valid_result) == 0:
-            print("Invalid result")
             continue
         chose_out_diheral_angle = random.choice(valid_result)
 
