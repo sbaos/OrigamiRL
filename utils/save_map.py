@@ -78,5 +78,5 @@ def save_to_json(points, edges, rows, cols, filepath, boundary_nodes=None, node_
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=4)
     
-    print(f"Saved to {filepath}")
+    # print(f"Saved to {filepath}")
     return filepath

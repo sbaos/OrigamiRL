@@ -1,4 +1,5 @@
 from ptu.ptu import calc_ptu, Point, Edge
+from ptu.ptu_2 import calc_ptu_2
 from utils.get_map import load_from_json
 from enum import Enum
 import random
@@ -39,7 +40,11 @@ def calc_sector_angles(root_point: Point, p1: Point, p2: Point, p3: Point) -> tu
     p3_new = None
     i = 0
    
+    max_iter = n * 3
     while p1_new is None or p2_new is None or p3_new is None:
+        max_iter -= 1
+        if max_iter <= 0:
+            return ([], [], None, None, None)
         if sorted_points[i] in [p1,p2,p3]:
             if p3_new is not None:
                 if sorted_points[i] in [p1,p2,p3]:
@@ -143,7 +148,7 @@ def is_on_symmetric_line(point: Point, symmetry: SYMMETRY):
         return point.position[0] == point.position[1]
     return False
 
-def pick_points(boundary_nodes, level = 0):
+def pick_points(boundary_nodes, level = 1 ):
     if level == 0:
         return random.choice(boundary_nodes)
     temp_boundary_nodes = [point for point in boundary_nodes if point.level == level]
@@ -176,6 +181,12 @@ def is_on_segment(point: Point, u: Point, v: Point) -> bool:
     if cross_magnitude < 1e-6 and np.dot(direction2, direction3) <= 1e-6:
         return True
     return False
+
+def is_linear(p1: Point, p2: Point, p3: Point):
+    v1 = p2.position - p1.position
+    v2 = p3.position - p1.position
+    cross = v1[0] * v2[1] - v1[1] * v2[0]
+    return abs(cross) < 1e-6
 
 def is_two_points_coincide(point1: Point, point2: Point) -> bool:
     return np.linalg.norm(point1.position - point2.position) < 1e-6
@@ -389,10 +400,16 @@ def expand_point_2(root_point: Point, points: [Point], edges: [Edge])->tuple[Poi
     p1, p2 = random.sample(possible_points, 2)
     return p1, p2
 
-def handle_merge(root_point: Point,other_point: Point,value: float, points: [Point]):
-    if root_point.is_actived:
-            root_point.point_root.append(other_point)
-            root_point.in_diheral_angles.append(value)
+def handle_merge(root_point: Point,other_point: Point,value: float, points: [Point], temp_edges: [Edge]):
+    real_root_point = root_point
+    for edge in temp_edges:
+        if edge.u == other_point and is_on_segment(edge.v, root_point, other_point):
+            real_root_point = edge.v
+        elif edge.v == other_point and is_on_segment(edge.u, root_point, other_point):
+            real_root_point = edge.u
+        
+    if real_root_point.is_actived:
+            other_point.add_parent(root_point,value)
     
 def update_edges(u: Point,v: Point,theta, edges: [Edge]):
     updated = False
@@ -437,6 +454,9 @@ def show_map(points, edges, rows, cols, boundary_nodes):
     plt.show()
 
 def is_valid_result(root_point: Point,result: list[float]):
+    temp_point = root_point.clone()
+    for i in range(len(result)):
+        temp_point.add_children(temp_point.clone(),result[i])
     degree = sum([1 if angle > 0.1 else 0 for angle in result])
     value = [res if res > 0.1 else 0 for res in result][0]
     if degree == 1 and len(root_point.point_root) == 1 and abs(root_point.in_diheral_angles[0]-value) < 0.1:
@@ -448,40 +468,55 @@ def is_valid_result(root_point: Point,result: list[float]):
         return False
     positive = sum([1 if angle > 0 else 0 for angle in result+root_point.in_diheral_angles])
     negative = sum([1 if angle < 0 else 0 for angle in result+root_point.in_diheral_angles])
-    print(positive,negative)
-    # if abs(positive-negative) != 2:
-    #     return False
+    degree = count_degree(temp_point)
+    
+    if degree % 2 == 0 and abs(positive-negative) != 2:
+        return False
     return True
 
-def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 10):
-    level = 1
+def count_degree(point: Point):
+    degree =sum([1 if abs(angle) > 0.1 else 0 for angle in  point.in_diheral_angles+point.out_diheral_angles])
+    return degree
+
+def get_min_level(points: [Point]):
+    min_level = 99999999
+    for point in points:
+        min_level = min(min_level, point.level)
+    return min_level
+
+def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 30, extend_full = True, edge_extend_as_posible = True):
+    
     global __symmetric__
     __symmetric__ = symmetry
     points, edges, rows, cols, boundary_nodes = load_from_json(file_path)
-    N = 1
+
     num_try = 0
-   
-    while N < 100 and len(boundary_nodes) > 0:
+    
+    while N > 0 and ((extend_full and len(boundary_nodes) > 0) or (not extend_full)) :
         temp_edges = [edge.clone() for edge in edges]
-        N += 1
-        expand_point = pick_points(boundary_nodes, level)
+        N -= 1
+        expand_point = pick_points(boundary_nodes, get_min_level(boundary_nodes))
+
         num_try += 1
+
         if expand_point is None or num_try % 10 == 0:
-            level += 1
             continue
         expand_point.is_actived = True
+        p1_0, p2_0, p3_0 = expand_points_3(expand_point, points, temp_edges, boundary_nodes)
 
-        p1, p2, p3 = expand_points_3(expand_point, points, temp_edges, boundary_nodes)
+        p1,p2,p3 = p1_0, p2_0, p3_0
         if p1 is None or p2 is None or p3 is None:
+            expand_point.is_actived= False
             continue
         sector_angles = []
         list_in_diheral_angles = []
         sector_angles, list_in_diheral_angles, p1, p2, p3 = calc_sector_angles(expand_point, p1, p2, p3)
         sector_angles = norm_angles(sector_angles)
-        print(sector_angles, list_in_diheral_angles)
+        # print("expand_point: ",expand_point.point_idx," p1: ",p1.point_idx," p2: ",p2.point_idx," p3: ",p3.point_idx)
         list_in_diheral_angles = norm_angles(list_in_diheral_angles)
-        _, M1, M2 = calc_ptu(sector_angles, list_in_diheral_angles)
+        _, M1, M2 = calc_ptu_2(sector_angles, list_in_diheral_angles)
         if len(M1) == 0 or len(M2) == 0:
+            expand_point.is_actived = False
             continue
         
         valid_result = []
@@ -490,31 +525,33 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 10):
         if is_valid_result(expand_point,M2):
             valid_result.append(M2)
         if len(valid_result) == 0:
+            expand_point.is_actived = False
             continue
-        
+
         chose_out_diheral_angle = random.choice(valid_result)
 
-        print(expand_point.point_idx,p1.point_idx,p2.point_idx,p3.point_idx, chose_out_diheral_angle)
-        
         update_edges(expand_point,p1,chose_out_diheral_angle[0],temp_edges)
         update_edges(expand_point,p2,chose_out_diheral_angle[1],temp_edges)
         update_edges(expand_point,p3,chose_out_diheral_angle[2],temp_edges)
 
-        temp_edges, p1 = make_edge_longer_as_possible(expand_point, p1, chose_out_diheral_angle[0], points, temp_edges)
-        temp_edges, p2 = make_edge_longer_as_possible(expand_point, p2, chose_out_diheral_angle[1], points, temp_edges)
-        temp_edges, p3 = make_edge_longer_as_possible(expand_point, p3, chose_out_diheral_angle[2], points, temp_edges)
+        if edge_extend_as_posible:
+            temp_edges, p1 = make_edge_longer_as_possible(expand_point, p1, chose_out_diheral_angle[0], points, temp_edges)
+            temp_edges, p2 = make_edge_longer_as_possible(expand_point, p2, chose_out_diheral_angle[1], points, temp_edges)
+            temp_edges, p3 = make_edge_longer_as_possible(expand_point, p3, chose_out_diheral_angle[2], points, temp_edges)
         if p1.is_actived and p1 not in boundary_nodes:
+            expand_point.is_actived = False
             continue
         if p2.is_actived and p2 not in boundary_nodes:
+            expand_point.is_actived = False
             continue
         if p3.is_actived and p3 not in boundary_nodes:
+            expand_point.is_actived = False
             continue
-        print("Gap duoc")
         boundary_nodes.remove(expand_point)
         
-        handle_merge(expand_point,p1,chose_out_diheral_angle[0],points)
-        handle_merge(expand_point,p2,chose_out_diheral_angle[1],points)
-        handle_merge(expand_point,p3,chose_out_diheral_angle[2],points)
+        handle_merge(expand_point,p1,chose_out_diheral_angle[0],points, temp_edges)
+        handle_merge(expand_point,p2,chose_out_diheral_angle[1],points, temp_edges)
+        handle_merge(expand_point,p3,chose_out_diheral_angle[2],points, temp_edges)
 
         if not p1.is_border and p1 not in boundary_nodes:
             boundary_nodes.append(p1)
@@ -525,7 +562,7 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 10):
         if not p3.is_border and p3 not in boundary_nodes:
             boundary_nodes.append(p3)
             p3.is_actived = True
-        print("=======")
+
         p1.level = expand_point.level + 2
         p2.level = expand_point.level + 2
         p3.level = expand_point.level + 2
@@ -534,19 +571,16 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 10):
         p2.is_actived = True
         p3.is_actived = True
 
-        p1.add_parent(expand_point,chose_out_diheral_angle[0])
-        p2.add_parent(expand_point,chose_out_diheral_angle[1])
-        p3.add_parent(expand_point,chose_out_diheral_angle[2])
+        p1_0.add_parent(expand_point,chose_out_diheral_angle[0])
+        p2_0.add_parent(expand_point,chose_out_diheral_angle[1])
+        p3_0.add_parent(expand_point,chose_out_diheral_angle[2])
 
-        expand_point.add_children(p1, chose_out_diheral_angle[0])
-        expand_point.add_children(p2, chose_out_diheral_angle[1])
-        expand_point.add_children(p3, chose_out_diheral_angle[2])
-        
+        expand_point.add_children(p1_0, chose_out_diheral_angle[0])
+        expand_point.add_children(p2_0, chose_out_diheral_angle[1])
+        expand_point.add_children(p3_0, chose_out_diheral_angle[2])
+
         edges = temp_edges
-        print("After update: ",id(edges))
-
-        show_map(points, edges, rows, cols, boundary_nodes)
-        
+    
     for point in boundary_nodes:
         theta = -999
         for edge in edges:
@@ -557,11 +591,30 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 10):
     for point in points:
         if point.is_border:
             continue
-        degree = len(point.point_root)+len(point.children)
-        if degree == 3:
+        degree = count_degree(point)
+        if degree == 3 or degree == 1:
             return [],[],7,7,[]
+        elif degree == 2:
+            connected = []
+            angles = []
+            for idx, parent in enumerate(point.point_root):
+                if abs(point.in_diheral_angles[idx]) > 0.1:
+                    connected.append(parent)
+                    angles.append(point.in_diheral_angles[idx])
+            for idx, child in enumerate(point.children):
+                if abs(point.out_diheral_angles[idx]) > 0.1:
+                    connected.append(child)
+                    angles.append(point.out_diheral_angles[idx])
+            if len(connected) == 2:
+                if not is_linear(connected[0], point, connected[1]) or abs(angles[0] - angles[1]) >= 0.1:
+                    return [], [], 7, 7, []
+        elif degree % 2 == 0 and degree>0:
+            positive = sum([1 if angle > 0.1 else 0 for angle in point.in_diheral_angles+point.out_diheral_angles])
+            negative = sum([1 if angle < -0.1 else 0 for angle in point.in_diheral_angles+point.out_diheral_angles])
+            if abs(positive-negative) != 2:
+                return [], [], 7, 7, []
     # save_to_json(points, edges, rows, cols, "./output/basic_3.json", boundary_nodes)
     return points, edges, rows, cols, boundary_nodes
     
 
-    
+# goc = 0 thi bo luon

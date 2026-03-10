@@ -30,10 +30,14 @@ class Point:
         return f"Point({self.point_idx}, pos={self.position}, parents={parent_ids}, children={children_ids})"
 
     def add_children(self,other_point,value):
+        if other_point in self.children:
+            return
         self.children.append(other_point)
         self.out_diheral_angles.append(value)
 
     def add_parent(self,point,value):
+        if point in self.point_root:
+            return
         self.point_root.append(point)
         self.in_diheral_angles.append(value)
 
@@ -44,8 +48,12 @@ class Point:
             self.level = new_level
 
     def clone(self):
-        return Point(self.position[0], self.position[1], self.position[2], self.point_idx, self.point_root, self.children, self.is_actived)
-
+        point = Point(self.position[0], self.position[1], self.position[2], self.point_idx, self.point_root, self.children, self.is_actived)
+        point.point_root = [i for i in self.point_root]
+        point.children = [i for i in self.children]
+        point.in_diheral_angles = [i for i in self.in_diheral_angles]
+        point.out_diheral_angles = [i for i in self.out_diheral_angles]
+        return point
 class Edge:
     def __init__(self, u: Point, v: Point, value, attributes = [], edge_type = "", line_idx = -1, is_soft = False):
         self.u = u
@@ -77,82 +85,6 @@ def Rz(theta):
                    [ np.sin(theta), np.cos(theta) , 0 ],
                    [ 0         , 0        , 1 ]])
 
-def calc_angles(root_point: Point, p1: Point, p2: Point, p3: Point) -> tuple[list[list[float]], list[list[float]], Point, Point, Point]:
-    points = root_point.point_root + [p1, p2, p3]
-    vecs = [p.position - root_point.position for p in points]
-    angles = [np.arctan2(v[1], v[0]) for v in vecs]
-    
-    in_angles = root_point.in_diheral_angles + [-999, -999, -999]
-    sorted_pairs = sorted(zip(points, in_angles, angles), key=lambda x: x[2])
-    sorted_points, sorted_in_angles, sorted_angles = zip(*sorted_pairs)
-    n = len(sorted_points)
-
-    p1_new = None
-    p2_new = None
-    p3_new = None
-    i = 0
-    while p1_new is None or p2_new is None or p3_new is None:
-        if sorted_points[i] in [p1,p2,p3]:
-            if p3_new is not None:
-                if sorted_points[i] in [p1,p2,p3]:
-                    p1_new = sorted_points[i]
-                    p2_new = [p for p in [p1,p2,p3] if p not in [p1_new, p3_new]][0]
-            else:
-                next_idx = (i + 1) % n
-                if sorted_points[next_idx] not in [p1,p2,p3]:
-                    p3_new = sorted_points[i]
-        i = (i + 1) % n
-    
-    i1 = sorted_points.index(p1_new)
-    i2 = sorted_points.index(p2_new)
-    i3 = sorted_points.index(p3_new)
-
-    def sector_angles_ccw(start_idx: int, end_idx: int, not_include: int):
-        angles_seg = []
-        in_seg = []
-        idx = start_idx
-        step = 1
-        try:
-            while True:
-                if idx == not_include:
-                    angles_seg = []
-                    in_seg = []
-                    idx = start_idx
-                    step = -1
-                    continue
-                next_idx = (idx + step) % n
-                u = sorted_points[idx].position - root_point.position
-                v = sorted_points[next_idx].position - root_point.position
-                angle_af = np.arctan2(v[1], v[0])
-                angle_bf = np.arctan2(u[1], u[0])
-                
-                if angle_af < 0:
-                    angle_af = angle_af + np.pi*2
-                if angle_bf < 0:
-                    angle_bf = angle_bf + np.pi*2
-
-                angle = angle_af - angle_bf
-                if angle < 0:
-                    angle = angle + np.pi*2
-                angles_seg.append(angle)
-                if sorted_in_angles[idx] != -999:
-                    in_seg.append(sorted_in_angles[idx])
-                
-                if next_idx == end_idx:
-                    break
-                idx = next_idx
-        except:
-            pass
-        return angles_seg, in_seg
-    
-    seg1_d, seg1_in = sector_angles_ccw(i3, i1, i2)
-    seg2_d, seg2_in = sector_angles_ccw(i1, i2, i3)
-    seg3_d, seg3_in = sector_angles_ccw(i2, i3, i1)
-    
-    return ([seg1_d, seg2_d, seg3_d],
-            [seg1_in, seg2_in, seg3_in],
-            p1_new, p2_new, p3_new)
-
 def calc_p_j_m(p0,sector_angles,list_in_diheral_angles):
     res = np.identity(3)
     m = len(sector_angles)
@@ -170,7 +102,7 @@ def transform_fold_rev(angle_x,angle_z):
 
 def beta_delta(p1, pm, u_j, alpha_j_1):
     gamma = np.arccos(np.clip(p1.dot(pm), -1., 1.))
-    if np.isclose(pm[2],2., rtol = 1e-05, atol = 1e-8, equal_nan=False):
+    if np.isclose(pm[2],0., rtol = 1e-05, atol = 1e-8, equal_nan=False):
         pm_z = 1e-05
     else:
         pm_z = pm[2]
@@ -178,7 +110,7 @@ def beta_delta(p1, pm, u_j, alpha_j_1):
     numerator = np.cos(gamma) - np.cos(alpha_j_1)*np.cos(u_j)
     denominator = np.sin(alpha_j_1)*np.sin(u_j)
     if abs(denominator) < EPS:
-        denominator = np.sign(numerator)*EPS
+        denominator = np.sign(denominator)*EPS
     
     temp = np.clip(numerator/denominator,-1.,1.)
     return sgn*np.arccos(temp)
@@ -291,7 +223,6 @@ def ptu(sector_angles:list[list[float]],list_in_diheral_angles:list[list[float]]
     elif phi3 < -np.pi:
         phi3 += 2*np.pi
 
-    print(arr_u[0]+a)
     if (arr_u[0]+arr_u[1] - arr_u[2] > 0.001):
         pass
     else:

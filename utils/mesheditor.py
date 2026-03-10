@@ -10,8 +10,8 @@ class SegmentAssignerApp:
         self.root = root
         self.root.title("Line Segment Value Assigner")
         
-        self.canvas_width = 700
-        self.canvas_height = 700
+        self.canvas_width = 600
+        self.canvas_height = 600
         self.margin = 100
         
         self.rows = 7
