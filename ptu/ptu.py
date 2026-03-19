@@ -30,13 +30,13 @@ class Point:
         return f"Point({self.point_idx}, pos={self.position}, parents={parent_ids}, children={children_ids})"
 
     def add_children(self,other_point,value):
-        if other_point in self.children:
+        if other_point in self.children or other_point in self.point_root:
             return
         self.children.append(other_point)
         self.out_diheral_angles.append(value)
 
     def add_parent(self,point,value):
-        if point in self.point_root:
+        if point in self.point_root or point in self.children:
             return
         self.point_root.append(point)
         self.in_diheral_angles.append(value)
