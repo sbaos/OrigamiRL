@@ -30,13 +30,13 @@ class Point:
         return f"Point({self.point_idx}, pos={self.position}, parents={parent_ids}, children={children_ids})"
 
     def add_children(self,other_point,value):
-        if other_point in self.children or other_point in self.point_root:
+        if other_point in self.children or other_point in self.point_root or other_point is None:
             return
         self.children.append(other_point)
         self.out_diheral_angles.append(value)
 
     def add_parent(self,point,value):
-        if point in self.point_root or point in self.children:
+        if point in self.point_root or point in self.children or point is None:
             return
         self.point_root.append(point)
         self.in_diheral_angles.append(value)
@@ -246,6 +246,5 @@ def calc_ptu(sector_angles:list[list[float]],list_in_diheral_angles:list[list[fl
 
    M1 = [0 if abs(angle) <=0.1 else angle for angle in M1]
    M2 = [0 if abs(angle) <=0.1 else angle for angle in M2]
-   print(M1,M2)
    return [t, M1,M2]
 

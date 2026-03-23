@@ -9,13 +9,13 @@ from utils.rotate_map import rotate_graph
 from ptu.ptu import Point, Edge
 from tqdm import tqdm
 
-random.seed(3)
+random.seed(2)
 
 NUM_PATTERN = 122
 NUM_SAMPLE_OF_PATTERN = 30
 
 START_PATTERN = 1
-END_PATTERN = 123
+END_PATTERN = 122
 
 START_SAMPLE = 0
 NUM_TRY = 32
@@ -128,7 +128,7 @@ def main1(pattern_folder: str, output_folder_name: str, symmetry = SYMMETRY.Y, e
                 continue
 
 
-def main2(pattern_folder: str, output_folder_name_ = "./output"):
+def main2(pattern_folder: str, output_folder_name_ = "./output_"):
     pbar_sym = tqdm([SYMMETRY.Y,SYMMETRY.XY_LEFT,SYMMETRY.NONE], desc=f"Symmetry", position=0)
     pbar_i = tqdm(range(START_PATTERN,END_PATTERN), desc="Patterns", position=1)
     for symmetry in pbar_sym:
@@ -150,7 +150,7 @@ def main2(pattern_folder: str, output_folder_name_ = "./output"):
                                                                                 symmetry=symmetry,
                                                                                 N=k,
                                                                                 extend_full=k<50,
-                                                                                edge_extend_as_posible=False
+                                                                                edge_extend_as_posible=random.random()<0.5
                                                                                 )
                         if len(points) == 0 or points is None:
                             continue
@@ -167,6 +167,24 @@ def main2(pattern_folder: str, output_folder_name_ = "./output"):
                     # traceback.print_exc()
                     continue
 
+
+def main3(file_path = "./pattern/sample.json", output_folder_name =  "/output_sample_1", symmetry = SYMMETRY.Y, edge_extend_as_posible = True):
+    try:
+        N = 1
+        while N<100:
+            N+=1
+            points, edges, rows, cols, boundary_nodes = gen_pattern(file_path, 
+                                                                    symmetry=symmetry,
+                                                                    N=3,
+                                                                    extend_full=True,
+                                                                    edge_extend_as_posible=edge_extend_as_posible
+                                                                    )
+            if len(points) == 0 or points is None:
+                print("Failed to generate pattern from ", file_path)
+                continue
+            save_to_json(points, edges, rows, cols, output_folder_name, boundary_nodes)
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
 def get_all_map_value_in_folder(folder_name: str):
     old_map_value = set()
     if os.path.exists(folder_name):
@@ -178,15 +196,17 @@ def get_all_map_value_in_folder(folder_name: str):
     return old_map_value
 
 if __name__ == "__main__":
-    old_map_value = get_all_map_value_in_folder("./output_new_filtered")
+    old_map_value = get_all_map_value_in_folder("") #./output_new_filtered")
     # old_map_value = get_all_map_value_in_folder("./output_8") | old_map_value
     # old_map_value = get_all_map_value_in_folder("./output_9") | old_map_value
     # old_map_value = get_all_map_value_in_folder("./output_90") | old_map_value
     # old_map_value = get_all_map_value_in_folder("./output_91") | old_map_value
     # old_map_value = get_all_map_value_in_folder("./output_92") | old_map_value
     print(f"Loaded {len(old_map_value)} unique map values from existing patterns.")
+    # main3()
     main2(
         pattern_folder="./pattern_merge")
+    
     # main1(
     #     pattern_folder="./pattern_merge",
     #     output_folder_name="./output/output_sym_Y",

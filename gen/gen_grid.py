@@ -175,7 +175,6 @@ def do_symmetry(expand_point: Point, new_childrens: [Point], points: [Point], ed
     if sym_expand_point not in boundary_nodes:
         sym_expand_point.is_actived = True
         boundary_nodes.append(sym_expand_point)
-
     for i in range(num_new_children):
         sym_point = sym_points[i]
         if sym_point is None:
@@ -540,17 +539,19 @@ def get_min_level(points: [Point]):
     return min_level
 
 
-def update(points: [Point], edges: [Edge], rows: int, cols: int, boundary_nodes: [Point], expand_point: Point, edge_extend_as_posible: bool, chose_out_diheral_angle: float, point: Point):
+def update(points: [Point], edges: [Edge], rows: int, cols: int, boundary_nodes: [Point], expand_point: Point, edge_extend_as_posible: bool, chose_out_diheral_angle: float, point: Point|None, binding: [Point]):
 
+    p_0 = None
+    if point is None or point in expand_point.point_root or point in expand_point.children:
+        return points, edges, rows, cols, boundary_nodes, None, None
     update_edges(expand_point,point,chose_out_diheral_angle,edges)
     if edge_extend_as_posible:
         edges, point = make_edge_longer_as_possible(expand_point, point, chose_out_diheral_angle, points, edges)
     
     if point.is_actived and point not in boundary_nodes:
         expand_point.is_actived = False
-        return points, edges, rows, cols, boundary_nodes, point
+        return points, edges, rows, cols, boundary_nodes, point, None
     
-    boundary_nodes.remove(expand_point)
     handle_merge(expand_point,point,chose_out_diheral_angle,points, edges)
     if not point.is_border and point not in boundary_nodes:
         boundary_nodes.append(point)
@@ -558,8 +559,12 @@ def update(points: [Point], edges: [Edge], rows: int, cols: int, boundary_nodes:
     
     point.level = expand_point.level + 2
     point.is_actived = True
+    for p in binding:
+        if is_same_direction(p, expand_point, point, expand_point):
+            p_0 = p
+            break
 
-    return points, edges, rows, cols, boundary_nodes, point
+    return points, edges, rows, cols, boundary_nodes, point, p_0
 
 def gen_2_point(expand_point: Point, points: [Point], edges: [Edge], rows: int, cols: int, boundary_nodes: [Point], edge_extend_as_posible: bool):
     if len(expand_point.point_root) < 2:
@@ -579,7 +584,8 @@ def gen_2_point(expand_point: Point, points: [Point], edges: [Edge], rows: int, 
     sector_angles, list_in_diheral_angles, p1, p2, p3 = calc_sector_angles_2(expand_point, p1, p2, p3)
     sector_angles = norm_angles(sector_angles)
     list_in_diheral_angles = norm_angles(list_in_diheral_angles)
-    _, M1, M2 = calc_ptu_2(sector_angles, list_in_diheral_angles)
+
+    _, M1, M2 = calc_ptu(sector_angles, list_in_diheral_angles)
 
     if len(M1) == 0 or len(M2) == 0:
         expand_point.is_actived = False
@@ -593,42 +599,29 @@ def gen_2_point(expand_point: Point, points: [Point], edges: [Edge], rows: int, 
         expand_point.is_actived = False
         return points, edges, rows, cols, boundary_nodes
 
-
-    p3_idx = expand_point.point_root.index(p3)
-
+    p3_idx = expand_point.point_root.index(p3_0)
     chose_out_diheral_angle = random.choice(valid_result)
     if abs(chose_out_diheral_angle[2] - expand_point.in_diheral_angles[p3_idx]) < 0.1:
         expand_point.is_actived = False
         return points, edges, rows, cols, boundary_nodes
-    
-    update_edges(expand_point,p1,chose_out_diheral_angle[0],edges)
-    update_edges(expand_point,p2,chose_out_diheral_angle[1],edges)
-    if edge_extend_as_posible:
-        edges, p1 = make_edge_longer_as_possible(expand_point, p1, chose_out_diheral_angle[0], points, edges)
-        edges, p2 = make_edge_longer_as_possible(expand_point, p2, chose_out_diheral_angle[1], points, edges)
-    if p1.is_actived and p1 not in boundary_nodes:
-        expand_point.is_actived = False
-        return points, edges, rows, cols, boundary_nodes
-    if p2.is_actived and p2 not in boundary_nodes:
-        expand_point.is_actived = False
-        return points, edges, rows, cols, boundary_nodes
+
     boundary_nodes.remove(expand_point)
-    handle_merge(expand_point,p1,chose_out_diheral_angle[0],points, edges)
-    handle_merge(expand_point,p2,chose_out_diheral_angle[1],points, edges)
-    if not p1.is_border and p1 not in boundary_nodes:
-        boundary_nodes.append(p1)
-        p1.is_actived = True
-    if not p2.is_border and p2 not in boundary_nodes:
-        boundary_nodes.append(p2)
-        p2.is_actived = True
-    p1.level = expand_point.level + 2
-    p2.level = expand_point.level + 2
-    p1.is_actived = True
-    p2.is_actived = True
-    p1_0.add_parent(expand_point,chose_out_diheral_angle[0])
-    p2_0.add_parent(expand_point,chose_out_diheral_angle[1])
+    binding = [p1_0, p2_0, p3_0]
+    
+    points, edges, rows, cols, boundary_nodes, p1, p1_0 = update(points, edges, rows, cols, boundary_nodes, expand_point, edge_extend_as_posible, chose_out_diheral_angle[0], p1, binding)
+    points, edges, rows, cols, boundary_nodes, p2, p2_0 = update(points, edges, rows, cols, boundary_nodes, expand_point, edge_extend_as_posible, chose_out_diheral_angle[1], p2, binding)
+    points, edges, rows, cols, boundary_nodes, p3, p3_0 = update(points, edges, rows, cols, boundary_nodes, expand_point, edge_extend_as_posible, chose_out_diheral_angle[2], p3, binding)
+
+    if p1_0 is not None:
+        p1_0.add_parent(expand_point,chose_out_diheral_angle[0])
+    if p2_0 is not None:
+        p2_0.add_parent(expand_point,chose_out_diheral_angle[1])
+    if p3_0 is not None:
+        p3_0.add_parent(expand_point,chose_out_diheral_angle[2])
+
     expand_point.add_children(p1_0, chose_out_diheral_angle[0])
     expand_point.add_children(p2_0, chose_out_diheral_angle[1])
+    expand_point.add_children(p3_0, chose_out_diheral_angle[2])
     return points, edges, rows, cols, boundary_nodes
 
 def gen_3_point(expand_point: Point, points: [Point], edges: [Edge], rows: int, cols: int, boundary_nodes: [Point], edge_extend_as_posible: bool):
@@ -642,8 +635,9 @@ def gen_3_point(expand_point: Point, points: [Point], edges: [Edge], rows: int, 
     list_in_diheral_angles = []
     sector_angles, list_in_diheral_angles, p1, p2, p3 = calc_sector_angles_3(expand_point, p1, p2, p3)
     sector_angles = norm_angles(sector_angles)
+   
     list_in_diheral_angles = norm_angles(list_in_diheral_angles)
-    _, M1, M2 = calc_ptu_2(sector_angles, list_in_diheral_angles)
+    _, M1, M2 = calc_ptu(sector_angles, list_in_diheral_angles)
     if len(M1) == 0 or len(M2) == 0:
         expand_point.is_actived = False
         return points, edges, rows, cols, boundary_nodes
@@ -656,63 +650,36 @@ def gen_3_point(expand_point: Point, points: [Point], edges: [Edge], rows: int, 
         expand_point.is_actived = False
         return points, edges, rows, cols, boundary_nodes
     chose_out_diheral_angle = random.choice(valid_result)
-
-    
-    update_edges(expand_point,p1,chose_out_diheral_angle[0],edges)
-    update_edges(expand_point,p2,chose_out_diheral_angle[1],edges)
-    update_edges(expand_point,p3,chose_out_diheral_angle[2],edges)
-    if edge_extend_as_posible:
-        edges, p1 = make_edge_longer_as_possible(expand_point, p1, chose_out_diheral_angle[0], points, edges)
-        edges, p2 = make_edge_longer_as_possible(expand_point, p2, chose_out_diheral_angle[1], points, edges)
-        edges, p3 = make_edge_longer_as_possible(expand_point, p3, chose_out_diheral_angle[2], points, edges)
-    
-    if p1.is_actived and p1 not in boundary_nodes:
-        expand_point.is_actived = False
-        return points, edges, rows, cols, boundary_nodes
-    if p2.is_actived and p2 not in boundary_nodes:
-        expand_point.is_actived = False
-        return points, edges, rows, cols, boundary_nodes
-    if p3.is_actived and p3 not in boundary_nodes:
-        expand_point.is_actived = False
-        return points, edges, rows, cols, boundary_nodes
-    
     boundary_nodes.remove(expand_point)
-    handle_merge(expand_point,p1,chose_out_diheral_angle[0],points, edges)
-    handle_merge(expand_point,p2,chose_out_diheral_angle[1],points, edges)
-    handle_merge(expand_point,p3,chose_out_diheral_angle[2],points, edges)
-    if not p1.is_border and p1 not in boundary_nodes:
-        boundary_nodes.append(p1)
-        p1.is_actived = True
-    if not p2.is_border and p2 not in boundary_nodes:
-        boundary_nodes.append(p2)
-        p2.is_actived = True
-    if not p3.is_border and p3 not in boundary_nodes:
-        boundary_nodes.append(p3)
-        p3.is_actived = True
-    p1.level = expand_point.level + 2
-    p2.level = expand_point.level + 2
-    p3.level = expand_point.level + 2
-    p1.is_actived = True
-    p2.is_actived = True
-    p3.is_actived = True
-    
     binding = [p1_0, p2_0, p3_0]
-    for p in binding:
-        if is_same_direction(p1, expand_point, p, expand_point):
-            p1_0 = p
-            break
-    for p in binding:
-        if is_same_direction(p2, expand_point, p, expand_point):
-            p2_0 = p
-            break
-    for p in binding:
-        if is_same_direction(p3, expand_point, p, expand_point):
-            p3_0 = p
-            break
 
-    p1_0.add_parent(expand_point,chose_out_diheral_angle[0])
-    p2_0.add_parent(expand_point,chose_out_diheral_angle[1])
-    p3_0.add_parent(expand_point,chose_out_diheral_angle[2])
+    if abs(chose_out_diheral_angle[0]) < 0.1:
+        p1 = None
+    if abs(chose_out_diheral_angle[1]) < 0.1:
+        p2 = None
+    if abs(chose_out_diheral_angle[2]) < 0.1:
+        p3 = None
+   
+    points, edges, rows, cols, boundary_nodes, p1, p1_0 = update(points, 
+                                                            edges, 
+                                                            rows, 
+                                                            cols, 
+                                                            boundary_nodes, 
+                                                            expand_point, 
+                                                            edge_extend_as_posible, 
+                                                            chose_out_diheral_angle[0], 
+                                                            p1, 
+                                                            binding
+                                                            )
+    points, edges, rows, cols, boundary_nodes, p2, p2_0 = update(points, edges, rows, cols, boundary_nodes, expand_point, edge_extend_as_posible, chose_out_diheral_angle[1], p2, binding)
+    points, edges, rows, cols, boundary_nodes, p3, p3_0 = update(points, edges, rows, cols, boundary_nodes, expand_point, edge_extend_as_posible, chose_out_diheral_angle[2], p3, binding)
+    if p1_0 is not None:
+        p1_0.add_parent(expand_point,chose_out_diheral_angle[0])
+    if p2_0 is not None:
+        p2_0.add_parent(expand_point,chose_out_diheral_angle[1])
+    if p3_0 is not None:
+        p3_0.add_parent(expand_point,chose_out_diheral_angle[2])
+
     expand_point.add_children(p1_0, chose_out_diheral_angle[0])
     expand_point.add_children(p2_0, chose_out_diheral_angle[1])
     expand_point.add_children(p3_0, chose_out_diheral_angle[2])
@@ -734,40 +701,44 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 30, extend_full = True, 
         num_parent = len(expand_point.point_root) #and random.random() < 0.5
         num_children = len(expand_point.children)
 
-        if not num_parent >= 2 and random.random() < 0.5:
-            points, temp_edges, rows, cols, boundary_nodes = gen_3_point(expand_point=expand_point, 
-                                                                        points=points, 
-                                                                        edges=temp_edges, 
-                                                                        rows=rows, 
-                                                                        cols=cols, 
-                                                                        boundary_nodes=boundary_nodes,
-                                                                        edge_extend_as_posible=edge_extend_as_posible)
-        else:
-            points, temp_edges, rows, cols, boundary_nodes = gen_2_point(expand_point=expand_point, 
-                                                                        points=points, 
-                                                                        edges=temp_edges, 
-                                                                        rows=rows, 
-                                                                        cols=cols, 
-                                                                        boundary_nodes=boundary_nodes,
-                                                                        edge_extend_as_posible=edge_extend_as_posible) 
+        a = random.random()
         
+        # show_map(points, edges, rows, cols, boundary_nodes)
+        if not num_parent >= 2 and a < 0.5:
+                points, temp_edges, rows, cols, boundary_nodes = gen_3_point(expand_point=expand_point, 
+                                                                            points=points, 
+                                                                            edges=temp_edges, 
+                                                                            rows=rows, 
+                                                                            cols=cols, 
+                                                                            boundary_nodes=boundary_nodes,
+                                                                            edge_extend_as_posible=edge_extend_as_posible)
+        else:
+                points, temp_edges, rows, cols, boundary_nodes = gen_2_point(expand_point=expand_point, 
+                                                                            points=points, 
+                                                                            edges=temp_edges, 
+                                                                            rows=rows, 
+                                                                            cols=cols, 
+                                                                            boundary_nodes=boundary_nodes,
+                                                                            edge_extend_as_posible=edge_extend_as_posible) 
         num_new_children = len(expand_point.children) - num_children
+        # show_map(points, edges, rows, cols, boundary_nodes)
 
         new_childrens = [point for point in points 
                             if point.point_idx in [child.point_idx for child in expand_point.children[-num_new_children:]]]
-
         points, temp_edges, rows, cols, boundary_nodes = do_symmetry(expand_point, new_childrens, points, temp_edges, rows, cols, boundary_nodes)
         edges = temp_edges
-
     for point in boundary_nodes:
         theta = -999
+        if len(point.point_root) == 0:
+            continue
+        if len(point.point_root) > 1:
+            return [], [], 7, 7, []
         for edge in edges:
             if is_uv_of_segment(point,point.point_root[0],edge):
                 theta = edge.value
                 break
-        if len(point.point_root) > 1:
-            return [], [], 7, 7, []
         edges, p = make_edge_longer_as_possible(point.point_root[0], point, theta, points, edges)
+   
     for point in points:
         if point.is_border:
             continue
@@ -794,7 +765,6 @@ def gen_pattern(file_path: str, symmetry: SYMMETRY, N = 30, extend_full = True, 
             if abs(positive-negative) != 2:
                 return [], [], 7, 7, []
     # save_to_json(points, edges, rows, cols, "./output/basic_3.json", boundary_nodes)
-    # show_map(points, edges, rows, cols, boundary_nodes)
     return points, edges, rows, cols, boundary_nodes
     
 
