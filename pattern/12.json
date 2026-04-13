@@ -231,7 +231,7 @@
         {
             "u": 0,
             "v": 8,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 7,
                 1,
@@ -239,7 +239,7 @@
                 8
             ],
             "edge_type": "Diagonal\\",
-            "direction": "0 -> 8"
+            "direction": "none"
         },
         {
             "u": 1,
@@ -1321,9 +1321,9 @@
             "direction": "none"
         },
         {
-            "u": 31,
-            "v": 38,
-            "value": -999,
+            "u": 38,
+            "v": 31,
+            "value": -3.13,
             "attributes": [
                 30,
                 32,
@@ -1331,7 +1331,7 @@
                 38
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "38 -> 31"
         },
         {
             "u": 32,
@@ -1555,9 +1555,9 @@
             "direction": "none"
         },
         {
-            "u": 38,
-            "v": 45,
-            "value": -999,
+            "u": 45,
+            "v": 38,
+            "value": -3.13,
             "attributes": [
                 44,
                 46,
@@ -1565,7 +1565,7 @@
                 45
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "45 -> 38"
         },
         {
             "u": 38,
@@ -1764,7 +1764,7 @@
         }
     ],
     "boundary_nodes": [
-        8
+        31
     ],
     "border_points": [
         0,
@@ -1794,9 +1794,7 @@
     ],
     "node_connections": {
         "0": {
-            "out_edges": [
-                8
-            ],
+            "out_edges": [],
             "in_edges": []
         },
         "1": {
@@ -1829,9 +1827,7 @@
         },
         "8": {
             "out_edges": [],
-            "in_edges": [
-                0
-            ]
+            "in_edges": []
         },
         "9": {
             "out_edges": [],
@@ -1923,7 +1919,9 @@
         },
         "31": {
             "out_edges": [],
-            "in_edges": []
+            "in_edges": [
+                38
+            ]
         },
         "32": {
             "out_edges": [],
@@ -1950,8 +1948,12 @@
             "in_edges": []
         },
         "38": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                31
+            ],
+            "in_edges": [
+                45
+            ]
         },
         "39": {
             "out_edges": [],
@@ -1978,7 +1980,9 @@
             "in_edges": []
         },
         "45": {
-            "out_edges": [],
+            "out_edges": [
+                38
+            ],
             "in_edges": []
         },
         "46": {

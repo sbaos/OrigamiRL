@@ -284,3 +284,15 @@ def calc_ptu_2(sector_angles, list_in_dihedral_angles):
     t = [x for y in sector_angles for x in y]
 
     return [t, M1, M2]
+
+
+if __name__ == "__main__":
+    PI = 3.15
+    sector_angles = [[PI/4,PI/2], [PI*3/4],[PI/2]]
+    # sector_angles = [[np.float64(0.7853981633974483), np.float64(1.5707963267948966)], [np.float64(1.5707963267948966)], [np.float64(2.356194490192345)]]
+    print(sum([x for y in sector_angles for x in y])-2*PI)
+    list_in_diheral_angles =  [[PI], [], []]
+    t, M1, M2 = calc_ptu_2(sector_angles,list_in_diheral_angles)
+    print(t)
+    print(M1)
+    print(M2)

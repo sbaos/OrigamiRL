@@ -19,6 +19,7 @@ def add_all_connection(points, node_connections, edges):
         point.point_root = [points[i] for i in point_connections.get("in_edges", [])]
         point.in_diheral_angles = [get_edge_value_by_u_v(edges, point.point_idx, i) for i in point_connections.get("in_edges", [])]
         point.children = [points[i] for i in point_connections.get("out_edges", [])]
+        point.out_diheral_angles = [get_edge_value_by_u_v(edges, point.point_idx, i) for i in point_connections.get("out_edges", [])]
 
 def load_from_json(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:

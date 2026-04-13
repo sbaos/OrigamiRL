@@ -231,7 +231,7 @@
         {
             "u": 0,
             "v": 8,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 7,
                 1,
@@ -239,7 +239,7 @@
                 8
             ],
             "edge_type": "Diagonal\\",
-            "direction": "0 -> 8"
+            "direction": "none"
         },
         {
             "u": 1,
@@ -1061,9 +1061,9 @@
             "direction": "none"
         },
         {
-            "u": 24,
-            "v": 31,
-            "value": -999,
+            "u": 31,
+            "v": 24,
+            "value": -3.13,
             "attributes": [
                 30,
                 32,
@@ -1071,7 +1071,7 @@
                 31
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "31 -> 24"
         },
         {
             "u": 24,
@@ -1321,9 +1321,9 @@
             "direction": "none"
         },
         {
-            "u": 31,
-            "v": 38,
-            "value": -999,
+            "u": 38,
+            "v": 31,
+            "value": -3.13,
             "attributes": [
                 30,
                 32,
@@ -1331,7 +1331,7 @@
                 38
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "38 -> 31"
         },
         {
             "u": 32,
@@ -1555,9 +1555,9 @@
             "direction": "none"
         },
         {
-            "u": 38,
-            "v": 45,
-            "value": -999,
+            "u": 45,
+            "v": 38,
+            "value": -3.13,
             "attributes": [
                 44,
                 46,
@@ -1565,7 +1565,7 @@
                 45
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "45 -> 38"
         },
         {
             "u": 38,
@@ -1646,9 +1646,9 @@
             "direction": "none"
         },
         {
-            "u": 48,
-            "v": 40,
-            "value": -1.56,
+            "u": 40,
+            "v": 48,
+            "value": -999,
             "attributes": [
                 47,
                 41,
@@ -1656,7 +1656,7 @@
                 48
             ],
             "edge_type": "Diagonal\\",
-            "direction": "48 -> 40"
+            "direction": "none"
         },
         {
             "u": 40,
@@ -1764,8 +1764,7 @@
         }
     ],
     "boundary_nodes": [
-        8,
-        40
+        24
     ],
     "border_points": [
         0,
@@ -1795,9 +1794,7 @@
     ],
     "node_connections": {
         "0": {
-            "out_edges": [
-                8
-            ],
+            "out_edges": [],
             "in_edges": []
         },
         "1": {
@@ -1830,9 +1827,7 @@
         },
         "8": {
             "out_edges": [],
-            "in_edges": [
-                0
-            ]
+            "in_edges": []
         },
         "9": {
             "out_edges": [],
@@ -1896,7 +1891,9 @@
         },
         "24": {
             "out_edges": [],
-            "in_edges": []
+            "in_edges": [
+                31
+            ]
         },
         "25": {
             "out_edges": [],
@@ -1923,8 +1920,12 @@
             "in_edges": []
         },
         "31": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                24
+            ],
+            "in_edges": [
+                38
+            ]
         },
         "32": {
             "out_edges": [],
@@ -1951,8 +1952,12 @@
             "in_edges": []
         },
         "38": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                31
+            ],
+            "in_edges": [
+                45
+            ]
         },
         "39": {
             "out_edges": [],
@@ -1960,9 +1965,7 @@
         },
         "40": {
             "out_edges": [],
-            "in_edges": [
-                48
-            ]
+            "in_edges": []
         },
         "41": {
             "out_edges": [],
@@ -1981,7 +1984,9 @@
             "in_edges": []
         },
         "45": {
-            "out_edges": [],
+            "out_edges": [
+                38
+            ],
             "in_edges": []
         },
         "46": {
@@ -1993,9 +1998,7 @@
             "in_edges": []
         },
         "48": {
-            "out_edges": [
-                40
-            ],
+            "out_edges": [],
             "in_edges": []
         }
     }

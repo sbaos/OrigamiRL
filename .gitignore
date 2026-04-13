@@ -8,3 +8,5 @@ wheels/
 *output*
 # Virtual environments
 .venv
+ModelNet40/
+target/

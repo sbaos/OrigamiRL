@@ -543,7 +543,7 @@
         {
             "u": 16,
             "v": 9,
-            "value": -1.56,
+            "value": -3.13,
             "attributes": [
                 8,
                 10,
@@ -619,9 +619,9 @@
             "direction": "none"
         },
         {
-            "u": 11,
-            "v": 18,
-            "value": -999,
+            "u": 18,
+            "v": 11,
+            "value": -3.13,
             "attributes": [
                 10,
                 12,
@@ -629,7 +629,7 @@
                 18
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "18 -> 11"
         },
         {
             "u": 12,
@@ -645,9 +645,9 @@
             "direction": "none"
         },
         {
-            "u": 19,
-            "v": 12,
-            "value": -1.56,
+            "u": 12,
+            "v": 19,
+            "value": -999,
             "attributes": [
                 18,
                 20,
@@ -655,7 +655,7 @@
                 19
             ],
             "edge_type": "Vertical",
-            "direction": "19 -> 12"
+            "direction": "none"
         },
         {
             "u": 12,
@@ -777,7 +777,7 @@
         {
             "u": 23,
             "v": 16,
-            "value": -1.56,
+            "value": -3.13,
             "attributes": [
                 22,
                 24,
@@ -853,9 +853,9 @@
             "direction": "none"
         },
         {
-            "u": 18,
-            "v": 25,
-            "value": -999,
+            "u": 25,
+            "v": 18,
+            "value": -3.13,
             "attributes": [
                 24,
                 26,
@@ -863,7 +863,7 @@
                 25
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "25 -> 18"
         },
         {
             "u": 18,
@@ -907,7 +907,7 @@
         {
             "u": 19,
             "v": 26,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 18,
                 20,
@@ -915,7 +915,7 @@
                 26
             ],
             "edge_type": "Vertical",
-            "direction": "19 -> 26"
+            "direction": "none"
         },
         {
             "u": 20,
@@ -1035,9 +1035,9 @@
             "direction": "none"
         },
         {
-            "u": 23,
-            "v": 30,
-            "value": -1.56,
+            "u": 30,
+            "v": 23,
+            "value": -3.13,
             "attributes": [
                 22,
                 24,
@@ -1045,7 +1045,7 @@
                 30
             ],
             "edge_type": "Vertical",
-            "direction": "23 -> 30"
+            "direction": "30 -> 23"
         },
         {
             "u": 24,
@@ -1113,9 +1113,9 @@
             "direction": "none"
         },
         {
-            "u": 25,
-            "v": 32,
-            "value": -999,
+            "u": 32,
+            "v": 25,
+            "value": -3.13,
             "attributes": [
                 24,
                 26,
@@ -1123,7 +1123,7 @@
                 32
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "32 -> 25"
         },
         {
             "u": 26,
@@ -1141,7 +1141,7 @@
         {
             "u": 26,
             "v": 33,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 32,
                 34,
@@ -1149,7 +1149,7 @@
                 33
             ],
             "edge_type": "Vertical",
-            "direction": "26 -> 33"
+            "direction": "none"
         },
         {
             "u": 26,
@@ -1269,9 +1269,9 @@
             "direction": "none"
         },
         {
-            "u": 30,
-            "v": 37,
-            "value": -1.56,
+            "u": 37,
+            "v": 30,
+            "value": -3.13,
             "attributes": [
                 36,
                 38,
@@ -1279,7 +1279,7 @@
                 37
             ],
             "edge_type": "Vertical",
-            "direction": "30 -> 37"
+            "direction": "37 -> 30"
         },
         {
             "u": 30,
@@ -1347,9 +1347,9 @@
             "direction": "none"
         },
         {
-            "u": 32,
-            "v": 39,
-            "value": -999,
+            "u": 39,
+            "v": 32,
+            "value": -3.13,
             "attributes": [
                 38,
                 40,
@@ -1357,7 +1357,7 @@
                 39
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "39 -> 32"
         },
         {
             "u": 32,
@@ -1401,7 +1401,7 @@
         {
             "u": 33,
             "v": 40,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 32,
                 34,
@@ -1409,7 +1409,7 @@
                 40
             ],
             "edge_type": "Vertical",
-            "direction": "33 -> 40"
+            "direction": "none"
         },
         {
             "u": 34,
@@ -1529,9 +1529,9 @@
             "direction": "none"
         },
         {
-            "u": 37,
-            "v": 44,
-            "value": -999,
+            "u": 44,
+            "v": 37,
+            "value": -3.13,
             "attributes": [
                 36,
                 38,
@@ -1539,7 +1539,7 @@
                 44
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "44 -> 37"
         },
         {
             "u": 38,
@@ -1607,9 +1607,9 @@
             "direction": "none"
         },
         {
-            "u": 39,
-            "v": 46,
-            "value": -999,
+            "u": 46,
+            "v": 39,
+            "value": -3.13,
             "attributes": [
                 38,
                 40,
@@ -1617,7 +1617,7 @@
                 46
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "46 -> 39"
         },
         {
             "u": 40,
@@ -1765,9 +1765,7 @@
     ],
     "boundary_nodes": [
         9,
-        12,
-        37,
-        40
+        11
     ],
     "border_points": [
         0,
@@ -1844,13 +1842,13 @@
         },
         "11": {
             "out_edges": [],
-            "in_edges": []
+            "in_edges": [
+                18
+            ]
         },
         "12": {
             "out_edges": [],
-            "in_edges": [
-                19
-            ]
+            "in_edges": []
         },
         "13": {
             "out_edges": [],
@@ -1877,14 +1875,15 @@
             "in_edges": []
         },
         "18": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                11
+            ],
+            "in_edges": [
+                25
+            ]
         },
         "19": {
-            "out_edges": [
-                26,
-                12
-            ],
+            "out_edges": [],
             "in_edges": []
         },
         "20": {
@@ -1901,26 +1900,27 @@
         },
         "23": {
             "out_edges": [
-                16,
-                30
+                16
             ],
-            "in_edges": []
+            "in_edges": [
+                30
+            ]
         },
         "24": {
             "out_edges": [],
             "in_edges": []
         },
         "25": {
-            "out_edges": [],
-            "in_edges": []
-        },
-        "26": {
             "out_edges": [
-                33
+                18
             ],
             "in_edges": [
-                19
+                32
             ]
+        },
+        "26": {
+            "out_edges": [],
+            "in_edges": []
         },
         "27": {
             "out_edges": [],
@@ -1936,10 +1936,10 @@
         },
         "30": {
             "out_edges": [
-                37
+                23
             ],
             "in_edges": [
-                23
+                37
             ]
         },
         "31": {
@@ -1947,16 +1947,16 @@
             "in_edges": []
         },
         "32": {
-            "out_edges": [],
-            "in_edges": []
-        },
-        "33": {
             "out_edges": [
-                40
+                25
             ],
             "in_edges": [
-                26
+                39
             ]
+        },
+        "33": {
+            "out_edges": [],
+            "in_edges": []
         },
         "34": {
             "out_edges": [],
@@ -1971,9 +1971,11 @@
             "in_edges": []
         },
         "37": {
-            "out_edges": [],
-            "in_edges": [
+            "out_edges": [
                 30
+            ],
+            "in_edges": [
+                44
             ]
         },
         "38": {
@@ -1981,14 +1983,16 @@
             "in_edges": []
         },
         "39": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                32
+            ],
+            "in_edges": [
+                46
+            ]
         },
         "40": {
             "out_edges": [],
-            "in_edges": [
-                33
-            ]
+            "in_edges": []
         },
         "41": {
             "out_edges": [],
@@ -2003,7 +2007,9 @@
             "in_edges": []
         },
         "44": {
-            "out_edges": [],
+            "out_edges": [
+                37
+            ],
             "in_edges": []
         },
         "45": {
@@ -2011,7 +2017,9 @@
             "in_edges": []
         },
         "46": {
-            "out_edges": [],
+            "out_edges": [
+                39
+            ],
             "in_edges": []
         },
         "47": {

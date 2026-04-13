@@ -173,7 +173,7 @@ def ptu(sector_angles:list[list[float]],list_in_diheral_angles:list[list[float]]
     u1 = compute_folded_unit(sector_angles[0],list_in_diheral_angles[0])
     u2 = compute_folded_unit(sector_angles[1],list_in_diheral_angles[1])
     u3 = compute_folded_unit(sector_angles[2],list_in_diheral_angles[2])
-
+    # print("u1, u2, u3: ", u1, u2, u3)
     arr_u = np.array([u1,u2,u3])
     arr_u.sort()
     
@@ -186,7 +186,10 @@ def ptu(sector_angles:list[list[float]],list_in_diheral_angles:list[list[float]]
     phi1 = beta3 + np.pi - theta1 + delta2
     phi2 = beta1 + np.pi - theta2 + delta3
     phi3 = beta2 + np.pi - theta3 + delta1
-
+    # print("beta1, beta2, beta3: ", beta1, beta2, beta3)
+    # print("delta1, delta2, delta3: ", delta1, delta2, delta3)
+    # print("theta1, theta2, theta3: ", theta1, theta2, theta3)
+    # print("phi1, phi2, phi3: ", phi1, phi2, phi3)
     if phi1 > np.pi:
         phi1 -= 2*np.pi
     elif phi1 < -np.pi:
@@ -223,7 +226,7 @@ def ptu(sector_angles:list[list[float]],list_in_diheral_angles:list[list[float]]
     elif phi3 < -np.pi:
         phi3 += 2*np.pi
 
-    if (arr_u[0]+arr_u[1] - arr_u[2] > 0.001):
+    if (arr_u[0]+arr_u[1] - arr_u[2] > -1e-3):
         pass
     else:
         return [],[]
@@ -248,3 +251,19 @@ def calc_ptu(sector_angles:list[list[float]],list_in_diheral_angles:list[list[fl
    M2 = [0 if abs(angle) <=0.1 else angle for angle in M2]
    return [t, M1,M2]
 
+if __name__ == "__main__":
+
+    for PI in [3.13,3.15]:
+        # PI = 3.13
+        print("PI", PI)
+        # sector_angles = [[PI/4,PI/2], [PI*3/4],[PI/2]]
+        sector_angles =[[np.float64(0.7853981633974483), 1.5707463267948965], [np.float64(2.356194490192345)], [1.5707463267948965]] 
+        # print(sum([x for y in sector_angles for x in y])-2*PI)
+        # list_in_diheral_angles =  [[-PI], [], []]
+        list_in_diheral_angles =  [[-3.141492653589793], [], []]
+        t, M1, M2 = calc_ptu(sector_angles,list_in_diheral_angles)
+        print(t)
+        print(list_in_diheral_angles)
+        print(M1)
+        print(M2)
+        
