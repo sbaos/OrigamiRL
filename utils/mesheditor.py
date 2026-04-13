@@ -14,8 +14,8 @@ class SegmentAssignerApp:
         self.canvas_height = 600
         self.margin = 100
         
-        self.rows = 7
-        self.cols = 7
+        self.rows = 9
+        self.cols = 9
         
         # Preset values with symbolic labels
         self.preset_values = [
