@@ -335,7 +335,7 @@
         {
             "u": 3,
             "v": 10,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 2,
                 4,
@@ -343,7 +343,7 @@
                 10
             ],
             "edge_type": "Vertical",
-            "direction": "3 -> 10"
+            "direction": "none"
         },
         {
             "u": 4,
@@ -489,9 +489,9 @@
             "direction": "none"
         },
         {
-            "u": 8,
-            "v": 15,
-            "value": -999,
+            "u": 15,
+            "v": 8,
+            "value": -3.13,
             "attributes": [
                 14,
                 16,
@@ -499,7 +499,7 @@
                 15
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "15 -> 8"
         },
         {
             "u": 8,
@@ -645,9 +645,9 @@
             "direction": "none"
         },
         {
-            "u": 12,
-            "v": 19,
-            "value": -999,
+            "u": 19,
+            "v": 12,
+            "value": -3.13,
             "attributes": [
                 18,
                 20,
@@ -655,7 +655,7 @@
                 19
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "19 -> 12"
         },
         {
             "u": 12,
@@ -749,9 +749,9 @@
             "direction": "none"
         },
         {
-            "u": 15,
-            "v": 22,
-            "value": -999,
+            "u": 22,
+            "v": 15,
+            "value": -3.13,
             "attributes": [
                 14,
                 16,
@@ -759,7 +759,7 @@
                 22
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "22 -> 15"
         },
         {
             "u": 16,
@@ -905,9 +905,9 @@
             "direction": "none"
         },
         {
-            "u": 19,
-            "v": 26,
-            "value": -999,
+            "u": 26,
+            "v": 19,
+            "value": -3.13,
             "attributes": [
                 18,
                 20,
@@ -915,7 +915,7 @@
                 26
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "26 -> 19"
         },
         {
             "u": 20,
@@ -983,9 +983,9 @@
             "direction": "none"
         },
         {
-            "u": 22,
-            "v": 29,
-            "value": -999,
+            "u": 29,
+            "v": 22,
+            "value": -3.13,
             "attributes": [
                 28,
                 30,
@@ -993,7 +993,7 @@
                 29
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "29 -> 22"
         },
         {
             "u": 22,
@@ -1035,9 +1035,9 @@
             "direction": "none"
         },
         {
-            "u": 30,
-            "v": 23,
-            "value": -1.56,
+            "u": 23,
+            "v": 30,
+            "value": -999,
             "attributes": [
                 22,
                 24,
@@ -1045,7 +1045,7 @@
                 30
             ],
             "edge_type": "Vertical",
-            "direction": "30 -> 23"
+            "direction": "none"
         },
         {
             "u": 24,
@@ -1139,9 +1139,9 @@
             "direction": "none"
         },
         {
-            "u": 26,
-            "v": 33,
-            "value": -999,
+            "u": 33,
+            "v": 26,
+            "value": -3.13,
             "attributes": [
                 32,
                 34,
@@ -1149,7 +1149,7 @@
                 33
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "33 -> 26"
         },
         {
             "u": 26,
@@ -1243,9 +1243,9 @@
             "direction": "none"
         },
         {
-            "u": 29,
-            "v": 36,
-            "value": -999,
+            "u": 36,
+            "v": 29,
+            "value": -3.13,
             "attributes": [
                 28,
                 30,
@@ -1253,7 +1253,7 @@
                 36
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "36 -> 29"
         },
         {
             "u": 30,
@@ -1271,7 +1271,7 @@
         {
             "u": 30,
             "v": 37,
-            "value": -1.56,
+            "value": -999,
             "attributes": [
                 36,
                 38,
@@ -1279,7 +1279,7 @@
                 37
             ],
             "edge_type": "Vertical",
-            "direction": "30 -> 37"
+            "direction": "none"
         },
         {
             "u": 30,
@@ -1399,9 +1399,9 @@
             "direction": "none"
         },
         {
-            "u": 33,
-            "v": 40,
-            "value": -999,
+            "u": 40,
+            "v": 33,
+            "value": -3.13,
             "attributes": [
                 32,
                 34,
@@ -1409,7 +1409,7 @@
                 40
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "40 -> 33"
         },
         {
             "u": 34,
@@ -1477,9 +1477,9 @@
             "direction": "none"
         },
         {
-            "u": 36,
-            "v": 43,
-            "value": -999,
+            "u": 43,
+            "v": 36,
+            "value": -3.13,
             "attributes": [
                 42,
                 44,
@@ -1487,7 +1487,7 @@
                 43
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "43 -> 36"
         },
         {
             "u": 36,
@@ -1607,9 +1607,9 @@
             "direction": "none"
         },
         {
-            "u": 46,
-            "v": 39,
-            "value": -1.56,
+            "u": 39,
+            "v": 46,
+            "value": -999,
             "attributes": [
                 38,
                 40,
@@ -1617,7 +1617,7 @@
                 46
             ],
             "edge_type": "Vertical",
-            "direction": "46 -> 39"
+            "direction": "none"
         },
         {
             "u": 40,
@@ -1633,9 +1633,9 @@
             "direction": "none"
         },
         {
-            "u": 40,
-            "v": 47,
-            "value": -999,
+            "u": 47,
+            "v": 40,
+            "value": -3.13,
             "attributes": [
                 46,
                 48,
@@ -1643,7 +1643,7 @@
                 47
             ],
             "edge_type": "Vertical",
-            "direction": "none"
+            "direction": "47 -> 40"
         },
         {
             "u": 40,
@@ -1764,10 +1764,8 @@
         }
     ],
     "boundary_nodes": [
-        10,
-        23,
-        37,
-        39
+        8,
+        12
     ],
     "border_points": [
         0,
@@ -1809,9 +1807,7 @@
             "in_edges": []
         },
         "3": {
-            "out_edges": [
-                10
-            ],
+            "out_edges": [],
             "in_edges": []
         },
         "4": {
@@ -1832,7 +1828,9 @@
         },
         "8": {
             "out_edges": [],
-            "in_edges": []
+            "in_edges": [
+                15
+            ]
         },
         "9": {
             "out_edges": [],
@@ -1840,9 +1838,7 @@
         },
         "10": {
             "out_edges": [],
-            "in_edges": [
-                3
-            ]
+            "in_edges": []
         },
         "11": {
             "out_edges": [],
@@ -1850,7 +1846,9 @@
         },
         "12": {
             "out_edges": [],
-            "in_edges": []
+            "in_edges": [
+                19
+            ]
         },
         "13": {
             "out_edges": [],
@@ -1861,8 +1859,12 @@
             "in_edges": []
         },
         "15": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                8
+            ],
+            "in_edges": [
+                22
+            ]
         },
         "16": {
             "out_edges": [],
@@ -1877,8 +1879,12 @@
             "in_edges": []
         },
         "19": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                12
+            ],
+            "in_edges": [
+                26
+            ]
         },
         "20": {
             "out_edges": [],
@@ -1889,14 +1895,16 @@
             "in_edges": []
         },
         "22": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                15
+            ],
+            "in_edges": [
+                29
+            ]
         },
         "23": {
             "out_edges": [],
-            "in_edges": [
-                30
-            ]
+            "in_edges": []
         },
         "24": {
             "out_edges": [],
@@ -1907,8 +1915,12 @@
             "in_edges": []
         },
         "26": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                19
+            ],
+            "in_edges": [
+                33
+            ]
         },
         "27": {
             "out_edges": [],
@@ -1919,14 +1931,15 @@
             "in_edges": []
         },
         "29": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                22
+            ],
+            "in_edges": [
+                36
+            ]
         },
         "30": {
-            "out_edges": [
-                37,
-                23
-            ],
+            "out_edges": [],
             "in_edges": []
         },
         "31": {
@@ -1938,8 +1951,12 @@
             "in_edges": []
         },
         "33": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                26
+            ],
+            "in_edges": [
+                40
+            ]
         },
         "34": {
             "out_edges": [],
@@ -1950,14 +1967,16 @@
             "in_edges": []
         },
         "36": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                29
+            ],
+            "in_edges": [
+                43
+            ]
         },
         "37": {
             "out_edges": [],
-            "in_edges": [
-                30
-            ]
+            "in_edges": []
         },
         "38": {
             "out_edges": [],
@@ -1965,13 +1984,15 @@
         },
         "39": {
             "out_edges": [],
-            "in_edges": [
-                46
-            ]
+            "in_edges": []
         },
         "40": {
-            "out_edges": [],
-            "in_edges": []
+            "out_edges": [
+                33
+            ],
+            "in_edges": [
+                47
+            ]
         },
         "41": {
             "out_edges": [],
@@ -1982,7 +2003,9 @@
             "in_edges": []
         },
         "43": {
-            "out_edges": [],
+            "out_edges": [
+                36
+            ],
             "in_edges": []
         },
         "44": {
@@ -1994,13 +2017,13 @@
             "in_edges": []
         },
         "46": {
-            "out_edges": [
-                39
-            ],
+            "out_edges": [],
             "in_edges": []
         },
         "47": {
-            "out_edges": [],
+            "out_edges": [
+                40
+            ],
             "in_edges": []
         },
         "48": {

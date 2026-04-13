@@ -1,0 +1,3418 @@
+{
+    "metadata": {
+        "rows": 9,
+        "cols": 9
+    },
+    "nodes": {
+        "0": [
+            -4.0,
+            4.0
+        ],
+        "1": [
+            -3.0,
+            4.0
+        ],
+        "2": [
+            -2.0,
+            4.0
+        ],
+        "3": [
+            -1.0,
+            4.0
+        ],
+        "4": [
+            0.0,
+            4.0
+        ],
+        "5": [
+            1.0,
+            4.0
+        ],
+        "6": [
+            2.0,
+            4.0
+        ],
+        "7": [
+            3.0,
+            4.0
+        ],
+        "8": [
+            4.0,
+            4.0
+        ],
+        "9": [
+            -4.0,
+            3.0
+        ],
+        "10": [
+            -3.0,
+            3.0
+        ],
+        "11": [
+            -2.0,
+            3.0
+        ],
+        "12": [
+            -1.0,
+            3.0
+        ],
+        "13": [
+            0.0,
+            3.0
+        ],
+        "14": [
+            1.0,
+            3.0
+        ],
+        "15": [
+            2.0,
+            3.0
+        ],
+        "16": [
+            3.0,
+            3.0
+        ],
+        "17": [
+            4.0,
+            3.0
+        ],
+        "18": [
+            -4.0,
+            2.0
+        ],
+        "19": [
+            -3.0,
+            2.0
+        ],
+        "20": [
+            -2.0,
+            2.0
+        ],
+        "21": [
+            -1.0,
+            2.0
+        ],
+        "22": [
+            0.0,
+            2.0
+        ],
+        "23": [
+            1.0,
+            2.0
+        ],
+        "24": [
+            2.0,
+            2.0
+        ],
+        "25": [
+            3.0,
+            2.0
+        ],
+        "26": [
+            4.0,
+            2.0
+        ],
+        "27": [
+            -4.0,
+            1.0
+        ],
+        "28": [
+            -3.0,
+            1.0
+        ],
+        "29": [
+            -2.0,
+            1.0
+        ],
+        "30": [
+            -1.0,
+            1.0
+        ],
+        "31": [
+            0.0,
+            1.0
+        ],
+        "32": [
+            1.0,
+            1.0
+        ],
+        "33": [
+            2.0,
+            1.0
+        ],
+        "34": [
+            3.0,
+            1.0
+        ],
+        "35": [
+            4.0,
+            1.0
+        ],
+        "36": [
+            -4.0,
+            0.0
+        ],
+        "37": [
+            -3.0,
+            0.0
+        ],
+        "38": [
+            -2.0,
+            0.0
+        ],
+        "39": [
+            -1.0,
+            0.0
+        ],
+        "40": [
+            0.0,
+            0.0
+        ],
+        "41": [
+            1.0,
+            0.0
+        ],
+        "42": [
+            2.0,
+            0.0
+        ],
+        "43": [
+            3.0,
+            0.0
+        ],
+        "44": [
+            4.0,
+            0.0
+        ],
+        "45": [
+            -4.0,
+            -1.0
+        ],
+        "46": [
+            -3.0,
+            -1.0
+        ],
+        "47": [
+            -2.0,
+            -1.0
+        ],
+        "48": [
+            -1.0,
+            -1.0
+        ],
+        "49": [
+            0.0,
+            -1.0
+        ],
+        "50": [
+            1.0,
+            -1.0
+        ],
+        "51": [
+            2.0,
+            -1.0
+        ],
+        "52": [
+            3.0,
+            -1.0
+        ],
+        "53": [
+            4.0,
+            -1.0
+        ],
+        "54": [
+            -4.0,
+            -2.0
+        ],
+        "55": [
+            -3.0,
+            -2.0
+        ],
+        "56": [
+            -2.0,
+            -2.0
+        ],
+        "57": [
+            -1.0,
+            -2.0
+        ],
+        "58": [
+            0.0,
+            -2.0
+        ],
+        "59": [
+            1.0,
+            -2.0
+        ],
+        "60": [
+            2.0,
+            -2.0
+        ],
+        "61": [
+            3.0,
+            -2.0
+        ],
+        "62": [
+            4.0,
+            -2.0
+        ],
+        "63": [
+            -4.0,
+            -3.0
+        ],
+        "64": [
+            -3.0,
+            -3.0
+        ],
+        "65": [
+            -2.0,
+            -3.0
+        ],
+        "66": [
+            -1.0,
+            -3.0
+        ],
+        "67": [
+            0.0,
+            -3.0
+        ],
+        "68": [
+            1.0,
+            -3.0
+        ],
+        "69": [
+            2.0,
+            -3.0
+        ],
+        "70": [
+            3.0,
+            -3.0
+        ],
+        "71": [
+            4.0,
+            -3.0
+        ],
+        "72": [
+            -4.0,
+            -4.0
+        ],
+        "73": [
+            -3.0,
+            -4.0
+        ],
+        "74": [
+            -2.0,
+            -4.0
+        ],
+        "75": [
+            -1.0,
+            -4.0
+        ],
+        "76": [
+            0.0,
+            -4.0
+        ],
+        "77": [
+            1.0,
+            -4.0
+        ],
+        "78": [
+            2.0,
+            -4.0
+        ],
+        "79": [
+            3.0,
+            -4.0
+        ],
+        "80": [
+            4.0,
+            -4.0
+        ]
+    },
+    "edges": [
+        {
+            "u": 0,
+            "v": 1,
+            "value": 0,
+            "attributes": [
+                10,
+                null,
+                0,
+                1
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 0,
+            "v": 9,
+            "value": 0,
+            "attributes": [
+                null,
+                10,
+                0,
+                9
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 0,
+            "v": 10,
+            "value": -999,
+            "attributes": [
+                9,
+                1,
+                0,
+                10
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 1,
+            "v": 2,
+            "value": 0,
+            "attributes": [
+                10,
+                null,
+                1,
+                2
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 1,
+            "v": 10,
+            "value": -999,
+            "attributes": [
+                0,
+                2,
+                1,
+                10
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 2,
+            "v": 3,
+            "value": 0,
+            "attributes": [
+                12,
+                null,
+                2,
+                3
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 2,
+            "v": 11,
+            "value": -999,
+            "attributes": [
+                10,
+                12,
+                2,
+                11
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 2,
+            "v": 12,
+            "value": -999,
+            "attributes": [
+                11,
+                3,
+                2,
+                12
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 2,
+            "v": 10,
+            "value": -999,
+            "attributes": [
+                1,
+                11,
+                2,
+                10
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 3,
+            "v": 4,
+            "value": 0,
+            "attributes": [
+                12,
+                null,
+                3,
+                4
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 3,
+            "v": 12,
+            "value": -999,
+            "attributes": [
+                2,
+                4,
+                3,
+                12
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 4,
+            "v": 5,
+            "value": 0,
+            "attributes": [
+                14,
+                null,
+                4,
+                5
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 4,
+            "v": 13,
+            "value": -999,
+            "attributes": [
+                12,
+                14,
+                4,
+                13
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 4,
+            "v": 14,
+            "value": -999,
+            "attributes": [
+                13,
+                5,
+                4,
+                14
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 4,
+            "v": 12,
+            "value": -999,
+            "attributes": [
+                3,
+                13,
+                4,
+                12
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 5,
+            "v": 6,
+            "value": 0,
+            "attributes": [
+                14,
+                null,
+                5,
+                6
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 5,
+            "v": 14,
+            "value": -999,
+            "attributes": [
+                4,
+                6,
+                5,
+                14
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 6,
+            "v": 7,
+            "value": 0,
+            "attributes": [
+                16,
+                null,
+                6,
+                7
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 6,
+            "v": 15,
+            "value": -999,
+            "attributes": [
+                14,
+                16,
+                6,
+                15
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 6,
+            "v": 16,
+            "value": -999,
+            "attributes": [
+                15,
+                7,
+                6,
+                16
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 6,
+            "v": 14,
+            "value": -999,
+            "attributes": [
+                5,
+                15,
+                6,
+                14
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 7,
+            "v": 8,
+            "value": 0,
+            "attributes": [
+                16,
+                null,
+                7,
+                8
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 7,
+            "v": 16,
+            "value": -999,
+            "attributes": [
+                6,
+                8,
+                7,
+                16
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 8,
+            "v": 17,
+            "value": 0,
+            "attributes": [
+                16,
+                null,
+                8,
+                17
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 8,
+            "v": 16,
+            "value": -999,
+            "attributes": [
+                7,
+                17,
+                8,
+                16
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 9,
+            "v": 10,
+            "value": -999,
+            "attributes": [
+                18,
+                0,
+                9,
+                10
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 9,
+            "v": 18,
+            "value": 0,
+            "attributes": [
+                null,
+                10,
+                9,
+                18
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 10,
+            "v": 11,
+            "value": -999,
+            "attributes": [
+                20,
+                2,
+                10,
+                11
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 10,
+            "v": 19,
+            "value": -999,
+            "attributes": [
+                18,
+                20,
+                10,
+                19
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 10,
+            "v": 20,
+            "value": -999,
+            "attributes": [
+                19,
+                11,
+                10,
+                20
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 10,
+            "v": 18,
+            "value": -999,
+            "attributes": [
+                9,
+                19,
+                10,
+                18
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 11,
+            "v": 12,
+            "value": -999,
+            "attributes": [
+                20,
+                2,
+                11,
+                12
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 11,
+            "v": 20,
+            "value": -999,
+            "attributes": [
+                10,
+                12,
+                11,
+                20
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 12,
+            "v": 13,
+            "value": -999,
+            "attributes": [
+                22,
+                4,
+                12,
+                13
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 12,
+            "v": 21,
+            "value": -999,
+            "attributes": [
+                20,
+                22,
+                12,
+                21
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 12,
+            "v": 22,
+            "value": -999,
+            "attributes": [
+                21,
+                13,
+                12,
+                22
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 12,
+            "v": 20,
+            "value": -999,
+            "attributes": [
+                11,
+                21,
+                12,
+                20
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 13,
+            "v": 14,
+            "value": -999,
+            "attributes": [
+                22,
+                4,
+                13,
+                14
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 13,
+            "v": 22,
+            "value": -999,
+            "attributes": [
+                12,
+                14,
+                13,
+                22
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 14,
+            "v": 15,
+            "value": -999,
+            "attributes": [
+                24,
+                6,
+                14,
+                15
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 14,
+            "v": 23,
+            "value": -999,
+            "attributes": [
+                22,
+                24,
+                14,
+                23
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 14,
+            "v": 24,
+            "value": -999,
+            "attributes": [
+                23,
+                15,
+                14,
+                24
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 14,
+            "v": 22,
+            "value": -999,
+            "attributes": [
+                13,
+                23,
+                14,
+                22
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 15,
+            "v": 16,
+            "value": -999,
+            "attributes": [
+                24,
+                6,
+                15,
+                16
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 15,
+            "v": 24,
+            "value": -999,
+            "attributes": [
+                14,
+                16,
+                15,
+                24
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 16,
+            "v": 17,
+            "value": -999,
+            "attributes": [
+                26,
+                8,
+                16,
+                17
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 16,
+            "v": 25,
+            "value": -999,
+            "attributes": [
+                24,
+                26,
+                16,
+                25
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 16,
+            "v": 26,
+            "value": -999,
+            "attributes": [
+                25,
+                17,
+                16,
+                26
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 16,
+            "v": 24,
+            "value": -999,
+            "attributes": [
+                15,
+                25,
+                16,
+                24
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 17,
+            "v": 26,
+            "value": 0,
+            "attributes": [
+                16,
+                null,
+                17,
+                26
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 18,
+            "v": 19,
+            "value": -999,
+            "attributes": [
+                28,
+                10,
+                18,
+                19
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 18,
+            "v": 27,
+            "value": 0,
+            "attributes": [
+                null,
+                28,
+                18,
+                27
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 18,
+            "v": 28,
+            "value": -999,
+            "attributes": [
+                27,
+                19,
+                18,
+                28
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 19,
+            "v": 20,
+            "value": -999,
+            "attributes": [
+                28,
+                10,
+                19,
+                20
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 19,
+            "v": 28,
+            "value": -999,
+            "attributes": [
+                18,
+                20,
+                19,
+                28
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 20,
+            "v": 21,
+            "value": -999,
+            "attributes": [
+                30,
+                12,
+                20,
+                21
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 20,
+            "v": 29,
+            "value": -999,
+            "attributes": [
+                28,
+                30,
+                20,
+                29
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 20,
+            "v": 30,
+            "value": -999,
+            "attributes": [
+                29,
+                21,
+                20,
+                30
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 20,
+            "v": 28,
+            "value": -999,
+            "attributes": [
+                19,
+                29,
+                20,
+                28
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 21,
+            "v": 22,
+            "value": -999,
+            "attributes": [
+                30,
+                12,
+                21,
+                22
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 21,
+            "v": 30,
+            "value": -999,
+            "attributes": [
+                20,
+                22,
+                21,
+                30
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 22,
+            "v": 23,
+            "value": -999,
+            "attributes": [
+                32,
+                14,
+                22,
+                23
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 22,
+            "v": 31,
+            "value": -999,
+            "attributes": [
+                30,
+                32,
+                22,
+                31
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 22,
+            "v": 32,
+            "value": -999,
+            "attributes": [
+                31,
+                23,
+                22,
+                32
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 22,
+            "v": 30,
+            "value": -999,
+            "attributes": [
+                21,
+                31,
+                22,
+                30
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 23,
+            "v": 24,
+            "value": -999,
+            "attributes": [
+                32,
+                14,
+                23,
+                24
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 23,
+            "v": 32,
+            "value": -999,
+            "attributes": [
+                22,
+                24,
+                23,
+                32
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 24,
+            "v": 25,
+            "value": -999,
+            "attributes": [
+                34,
+                16,
+                24,
+                25
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 24,
+            "v": 33,
+            "value": -999,
+            "attributes": [
+                32,
+                34,
+                24,
+                33
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 24,
+            "v": 34,
+            "value": -999,
+            "attributes": [
+                33,
+                25,
+                24,
+                34
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 24,
+            "v": 32,
+            "value": -999,
+            "attributes": [
+                23,
+                33,
+                24,
+                32
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 25,
+            "v": 26,
+            "value": -999,
+            "attributes": [
+                34,
+                16,
+                25,
+                26
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 25,
+            "v": 34,
+            "value": -999,
+            "attributes": [
+                24,
+                26,
+                25,
+                34
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 26,
+            "v": 35,
+            "value": 0,
+            "attributes": [
+                34,
+                null,
+                26,
+                35
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 26,
+            "v": 34,
+            "value": -999,
+            "attributes": [
+                25,
+                35,
+                26,
+                34
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 27,
+            "v": 28,
+            "value": -999,
+            "attributes": [
+                36,
+                18,
+                27,
+                28
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 27,
+            "v": 36,
+            "value": 0,
+            "attributes": [
+                null,
+                28,
+                27,
+                36
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 28,
+            "v": 29,
+            "value": -999,
+            "attributes": [
+                38,
+                20,
+                28,
+                29
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 28,
+            "v": 37,
+            "value": -999,
+            "attributes": [
+                36,
+                38,
+                28,
+                37
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 28,
+            "v": 38,
+            "value": -999,
+            "attributes": [
+                37,
+                29,
+                28,
+                38
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 28,
+            "v": 36,
+            "value": -999,
+            "attributes": [
+                27,
+                37,
+                28,
+                36
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 29,
+            "v": 30,
+            "value": -999,
+            "attributes": [
+                38,
+                20,
+                29,
+                30
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 29,
+            "v": 38,
+            "value": -999,
+            "attributes": [
+                28,
+                30,
+                29,
+                38
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 30,
+            "v": 31,
+            "value": -999,
+            "attributes": [
+                40,
+                22,
+                30,
+                31
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 30,
+            "v": 39,
+            "value": -999,
+            "attributes": [
+                38,
+                40,
+                30,
+                39
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 30,
+            "v": 40,
+            "value": -999,
+            "attributes": [
+                39,
+                31,
+                30,
+                40
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 30,
+            "v": 38,
+            "value": -999,
+            "attributes": [
+                29,
+                39,
+                30,
+                38
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 31,
+            "v": 32,
+            "value": -999,
+            "attributes": [
+                40,
+                22,
+                31,
+                32
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 31,
+            "v": 40,
+            "value": -999,
+            "attributes": [
+                30,
+                32,
+                31,
+                40
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 32,
+            "v": 33,
+            "value": -999,
+            "attributes": [
+                42,
+                24,
+                32,
+                33
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 32,
+            "v": 41,
+            "value": -999,
+            "attributes": [
+                40,
+                42,
+                32,
+                41
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 32,
+            "v": 42,
+            "value": -999,
+            "attributes": [
+                41,
+                33,
+                32,
+                42
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 32,
+            "v": 40,
+            "value": -999,
+            "attributes": [
+                31,
+                41,
+                32,
+                40
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 33,
+            "v": 34,
+            "value": -999,
+            "attributes": [
+                42,
+                24,
+                33,
+                34
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 33,
+            "v": 42,
+            "value": -999,
+            "attributes": [
+                32,
+                34,
+                33,
+                42
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 34,
+            "v": 35,
+            "value": -999,
+            "attributes": [
+                44,
+                26,
+                34,
+                35
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 34,
+            "v": 43,
+            "value": -999,
+            "attributes": [
+                42,
+                44,
+                34,
+                43
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 34,
+            "v": 44,
+            "value": -999,
+            "attributes": [
+                43,
+                35,
+                34,
+                44
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 34,
+            "v": 42,
+            "value": -999,
+            "attributes": [
+                33,
+                43,
+                34,
+                42
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 35,
+            "v": 44,
+            "value": 0,
+            "attributes": [
+                34,
+                null,
+                35,
+                44
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 36,
+            "v": 37,
+            "value": -999,
+            "attributes": [
+                46,
+                28,
+                36,
+                37
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 36,
+            "v": 45,
+            "value": 0,
+            "attributes": [
+                null,
+                46,
+                36,
+                45
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 36,
+            "v": 46,
+            "value": -999,
+            "attributes": [
+                45,
+                37,
+                36,
+                46
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 37,
+            "v": 38,
+            "value": -999,
+            "attributes": [
+                46,
+                28,
+                37,
+                38
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 37,
+            "v": 46,
+            "value": -999,
+            "attributes": [
+                36,
+                38,
+                37,
+                46
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 38,
+            "v": 39,
+            "value": -999,
+            "attributes": [
+                48,
+                30,
+                38,
+                39
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 38,
+            "v": 47,
+            "value": -999,
+            "attributes": [
+                46,
+                48,
+                38,
+                47
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 38,
+            "v": 48,
+            "value": -999,
+            "attributes": [
+                47,
+                39,
+                38,
+                48
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 38,
+            "v": 46,
+            "value": -999,
+            "attributes": [
+                37,
+                47,
+                38,
+                46
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 39,
+            "v": 40,
+            "value": -999,
+            "attributes": [
+                48,
+                30,
+                39,
+                40
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 39,
+            "v": 48,
+            "value": -999,
+            "attributes": [
+                38,
+                40,
+                39,
+                48
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 40,
+            "v": 41,
+            "value": -999,
+            "attributes": [
+                50,
+                32,
+                40,
+                41
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 40,
+            "v": 49,
+            "value": -999,
+            "attributes": [
+                48,
+                50,
+                40,
+                49
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 40,
+            "v": 50,
+            "value": -999,
+            "attributes": [
+                49,
+                41,
+                40,
+                50
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 40,
+            "v": 48,
+            "value": -999,
+            "attributes": [
+                39,
+                49,
+                40,
+                48
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 41,
+            "v": 42,
+            "value": -999,
+            "attributes": [
+                50,
+                32,
+                41,
+                42
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 41,
+            "v": 50,
+            "value": -999,
+            "attributes": [
+                40,
+                42,
+                41,
+                50
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 42,
+            "v": 43,
+            "value": -999,
+            "attributes": [
+                52,
+                34,
+                42,
+                43
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 42,
+            "v": 51,
+            "value": -999,
+            "attributes": [
+                50,
+                52,
+                42,
+                51
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 42,
+            "v": 52,
+            "value": -999,
+            "attributes": [
+                51,
+                43,
+                42,
+                52
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 42,
+            "v": 50,
+            "value": -999,
+            "attributes": [
+                41,
+                51,
+                42,
+                50
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 43,
+            "v": 44,
+            "value": -999,
+            "attributes": [
+                52,
+                34,
+                43,
+                44
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 43,
+            "v": 52,
+            "value": -999,
+            "attributes": [
+                42,
+                44,
+                43,
+                52
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 44,
+            "v": 53,
+            "value": 0,
+            "attributes": [
+                52,
+                null,
+                44,
+                53
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 44,
+            "v": 52,
+            "value": -999,
+            "attributes": [
+                43,
+                53,
+                44,
+                52
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 45,
+            "v": 46,
+            "value": -999,
+            "attributes": [
+                54,
+                36,
+                45,
+                46
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 45,
+            "v": 54,
+            "value": 0,
+            "attributes": [
+                null,
+                46,
+                45,
+                54
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 46,
+            "v": 47,
+            "value": -999,
+            "attributes": [
+                56,
+                38,
+                46,
+                47
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 46,
+            "v": 55,
+            "value": -999,
+            "attributes": [
+                54,
+                56,
+                46,
+                55
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 46,
+            "v": 56,
+            "value": -999,
+            "attributes": [
+                55,
+                47,
+                46,
+                56
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 46,
+            "v": 54,
+            "value": -999,
+            "attributes": [
+                45,
+                55,
+                46,
+                54
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 47,
+            "v": 48,
+            "value": -999,
+            "attributes": [
+                56,
+                38,
+                47,
+                48
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 47,
+            "v": 56,
+            "value": -999,
+            "attributes": [
+                46,
+                48,
+                47,
+                56
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 48,
+            "v": 49,
+            "value": -999,
+            "attributes": [
+                58,
+                40,
+                48,
+                49
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 48,
+            "v": 57,
+            "value": -999,
+            "attributes": [
+                56,
+                58,
+                48,
+                57
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 48,
+            "v": 58,
+            "value": -999,
+            "attributes": [
+                57,
+                49,
+                48,
+                58
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 48,
+            "v": 56,
+            "value": -999,
+            "attributes": [
+                47,
+                57,
+                48,
+                56
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 49,
+            "v": 50,
+            "value": -999,
+            "attributes": [
+                58,
+                40,
+                49,
+                50
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 49,
+            "v": 58,
+            "value": -999,
+            "attributes": [
+                48,
+                50,
+                49,
+                58
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 50,
+            "v": 51,
+            "value": -999,
+            "attributes": [
+                60,
+                42,
+                50,
+                51
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 50,
+            "v": 59,
+            "value": -999,
+            "attributes": [
+                58,
+                60,
+                50,
+                59
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 50,
+            "v": 60,
+            "value": -999,
+            "attributes": [
+                59,
+                51,
+                50,
+                60
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 50,
+            "v": 58,
+            "value": -999,
+            "attributes": [
+                49,
+                59,
+                50,
+                58
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 51,
+            "v": 52,
+            "value": -999,
+            "attributes": [
+                60,
+                42,
+                51,
+                52
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 51,
+            "v": 60,
+            "value": -999,
+            "attributes": [
+                50,
+                52,
+                51,
+                60
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 52,
+            "v": 53,
+            "value": -999,
+            "attributes": [
+                62,
+                44,
+                52,
+                53
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 52,
+            "v": 61,
+            "value": -999,
+            "attributes": [
+                60,
+                62,
+                52,
+                61
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 52,
+            "v": 62,
+            "value": -999,
+            "attributes": [
+                61,
+                53,
+                52,
+                62
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 52,
+            "v": 60,
+            "value": -999,
+            "attributes": [
+                51,
+                61,
+                52,
+                60
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 53,
+            "v": 62,
+            "value": 0,
+            "attributes": [
+                52,
+                null,
+                53,
+                62
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 54,
+            "v": 55,
+            "value": -999,
+            "attributes": [
+                64,
+                46,
+                54,
+                55
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 54,
+            "v": 63,
+            "value": 0,
+            "attributes": [
+                null,
+                64,
+                54,
+                63
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 54,
+            "v": 64,
+            "value": -999,
+            "attributes": [
+                63,
+                55,
+                54,
+                64
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 55,
+            "v": 56,
+            "value": -999,
+            "attributes": [
+                64,
+                46,
+                55,
+                56
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 55,
+            "v": 64,
+            "value": -999,
+            "attributes": [
+                54,
+                56,
+                55,
+                64
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 56,
+            "v": 57,
+            "value": -999,
+            "attributes": [
+                66,
+                48,
+                56,
+                57
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 56,
+            "v": 65,
+            "value": -999,
+            "attributes": [
+                64,
+                66,
+                56,
+                65
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 56,
+            "v": 66,
+            "value": -999,
+            "attributes": [
+                65,
+                57,
+                56,
+                66
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 64,
+            "v": 56,
+            "value": -3.13,
+            "attributes": [
+                55,
+                65,
+                56,
+                64
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "64 -> 56"
+        },
+        {
+            "u": 57,
+            "v": 58,
+            "value": -999,
+            "attributes": [
+                66,
+                48,
+                57,
+                58
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 57,
+            "v": 66,
+            "value": -999,
+            "attributes": [
+                56,
+                58,
+                57,
+                66
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 58,
+            "v": 59,
+            "value": -999,
+            "attributes": [
+                68,
+                50,
+                58,
+                59
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 58,
+            "v": 67,
+            "value": -999,
+            "attributes": [
+                66,
+                68,
+                58,
+                67
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 58,
+            "v": 68,
+            "value": -999,
+            "attributes": [
+                67,
+                59,
+                58,
+                68
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 58,
+            "v": 66,
+            "value": -999,
+            "attributes": [
+                57,
+                67,
+                58,
+                66
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 59,
+            "v": 60,
+            "value": -999,
+            "attributes": [
+                68,
+                50,
+                59,
+                60
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 59,
+            "v": 68,
+            "value": -999,
+            "attributes": [
+                58,
+                60,
+                59,
+                68
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 60,
+            "v": 61,
+            "value": -999,
+            "attributes": [
+                70,
+                52,
+                60,
+                61
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 60,
+            "v": 69,
+            "value": -999,
+            "attributes": [
+                68,
+                70,
+                60,
+                69
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 70,
+            "v": 60,
+            "value": -3.13,
+            "attributes": [
+                69,
+                61,
+                60,
+                70
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "70 -> 60"
+        },
+        {
+            "u": 60,
+            "v": 68,
+            "value": -999,
+            "attributes": [
+                59,
+                69,
+                60,
+                68
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 61,
+            "v": 62,
+            "value": -999,
+            "attributes": [
+                70,
+                52,
+                61,
+                62
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 61,
+            "v": 70,
+            "value": -999,
+            "attributes": [
+                60,
+                62,
+                61,
+                70
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 62,
+            "v": 71,
+            "value": 0,
+            "attributes": [
+                70,
+                null,
+                62,
+                71
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 62,
+            "v": 70,
+            "value": -999,
+            "attributes": [
+                61,
+                71,
+                62,
+                70
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 63,
+            "v": 64,
+            "value": -999,
+            "attributes": [
+                72,
+                54,
+                63,
+                64
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 63,
+            "v": 72,
+            "value": 0,
+            "attributes": [
+                null,
+                64,
+                63,
+                72
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 64,
+            "v": 65,
+            "value": -999,
+            "attributes": [
+                74,
+                56,
+                64,
+                65
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 64,
+            "v": 73,
+            "value": -999,
+            "attributes": [
+                72,
+                74,
+                64,
+                73
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 64,
+            "v": 74,
+            "value": -999,
+            "attributes": [
+                73,
+                65,
+                64,
+                74
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 72,
+            "v": 64,
+            "value": -3.13,
+            "attributes": [
+                63,
+                73,
+                64,
+                72
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "72 -> 64"
+        },
+        {
+            "u": 65,
+            "v": 66,
+            "value": -999,
+            "attributes": [
+                74,
+                56,
+                65,
+                66
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 65,
+            "v": 74,
+            "value": -999,
+            "attributes": [
+                64,
+                66,
+                65,
+                74
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 66,
+            "v": 67,
+            "value": -999,
+            "attributes": [
+                76,
+                58,
+                66,
+                67
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 66,
+            "v": 75,
+            "value": -999,
+            "attributes": [
+                74,
+                76,
+                66,
+                75
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 66,
+            "v": 76,
+            "value": -999,
+            "attributes": [
+                75,
+                67,
+                66,
+                76
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 66,
+            "v": 74,
+            "value": -999,
+            "attributes": [
+                65,
+                75,
+                66,
+                74
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 67,
+            "v": 68,
+            "value": -999,
+            "attributes": [
+                76,
+                58,
+                67,
+                68
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 67,
+            "v": 76,
+            "value": -999,
+            "attributes": [
+                66,
+                68,
+                67,
+                76
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 68,
+            "v": 69,
+            "value": -999,
+            "attributes": [
+                78,
+                60,
+                68,
+                69
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 68,
+            "v": 77,
+            "value": -999,
+            "attributes": [
+                76,
+                78,
+                68,
+                77
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 68,
+            "v": 78,
+            "value": -999,
+            "attributes": [
+                77,
+                69,
+                68,
+                78
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "none"
+        },
+        {
+            "u": 68,
+            "v": 76,
+            "value": -999,
+            "attributes": [
+                67,
+                77,
+                68,
+                76
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 69,
+            "v": 70,
+            "value": -999,
+            "attributes": [
+                78,
+                60,
+                69,
+                70
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 69,
+            "v": 78,
+            "value": -999,
+            "attributes": [
+                68,
+                70,
+                69,
+                78
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 70,
+            "v": 71,
+            "value": -999,
+            "attributes": [
+                80,
+                62,
+                70,
+                71
+            ],
+            "edge_type": "Horizontal",
+            "direction": "none"
+        },
+        {
+            "u": 70,
+            "v": 79,
+            "value": -999,
+            "attributes": [
+                78,
+                80,
+                70,
+                79
+            ],
+            "edge_type": "Vertical",
+            "direction": "none"
+        },
+        {
+            "u": 80,
+            "v": 70,
+            "value": -3.13,
+            "attributes": [
+                79,
+                71,
+                70,
+                80
+            ],
+            "edge_type": "Diagonal\\",
+            "direction": "80 -> 70"
+        },
+        {
+            "u": 70,
+            "v": 78,
+            "value": -999,
+            "attributes": [
+                69,
+                79,
+                70,
+                78
+            ],
+            "edge_type": "Diagonal/",
+            "direction": "none"
+        },
+        {
+            "u": 71,
+            "v": 80,
+            "value": 0,
+            "attributes": [
+                70,
+                null,
+                71,
+                80
+            ],
+            "edge_type": "Vertical",
+            "direction": "border"
+        },
+        {
+            "u": 72,
+            "v": 73,
+            "value": 0,
+            "attributes": [
+                null,
+                64,
+                72,
+                73
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 73,
+            "v": 74,
+            "value": 0,
+            "attributes": [
+                null,
+                64,
+                73,
+                74
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 74,
+            "v": 75,
+            "value": 0,
+            "attributes": [
+                null,
+                66,
+                74,
+                75
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 75,
+            "v": 76,
+            "value": 0,
+            "attributes": [
+                null,
+                66,
+                75,
+                76
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 76,
+            "v": 77,
+            "value": 0,
+            "attributes": [
+                null,
+                68,
+                76,
+                77
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 77,
+            "v": 78,
+            "value": 0,
+            "attributes": [
+                null,
+                68,
+                77,
+                78
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 78,
+            "v": 79,
+            "value": 0,
+            "attributes": [
+                null,
+                70,
+                78,
+                79
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        },
+        {
+            "u": 79,
+            "v": 80,
+            "value": 0,
+            "attributes": [
+                null,
+                70,
+                79,
+                80
+            ],
+            "edge_type": "Horizontal",
+            "direction": "border"
+        }
+    ],
+    "boundary_nodes": [
+        56,
+        60
+    ],
+    "border_points": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        17,
+        18,
+        26,
+        27,
+        35,
+        36,
+        44,
+        45,
+        53,
+        54,
+        62,
+        63,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+    ],
+    "node_connections": {
+        "0": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "1": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "2": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "3": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "4": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "5": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "6": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "7": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "8": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "9": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "10": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "11": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "12": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "13": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "14": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "15": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "16": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "17": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "18": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "19": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "20": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "21": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "22": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "23": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "24": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "25": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "26": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "27": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "28": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "29": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "30": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "31": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "32": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "33": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "34": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "35": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "36": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "37": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "38": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "39": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "40": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "41": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "42": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "43": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "44": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "45": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "46": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "47": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "48": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "49": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "50": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "51": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "52": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "53": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "54": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "55": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "56": {
+            "out_edges": [],
+            "in_edges": [
+                64
+            ]
+        },
+        "57": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "58": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "59": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "60": {
+            "out_edges": [],
+            "in_edges": [
+                70
+            ]
+        },
+        "61": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "62": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "63": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "64": {
+            "out_edges": [
+                56
+            ],
+            "in_edges": [
+                72
+            ]
+        },
+        "65": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "66": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "67": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "68": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "69": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "70": {
+            "out_edges": [
+                60
+            ],
+            "in_edges": [
+                80
+            ]
+        },
+        "71": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "72": {
+            "out_edges": [
+                64
+            ],
+            "in_edges": []
+        },
+        "73": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "74": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "75": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "76": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "77": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "78": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "79": {
+            "out_edges": [],
+            "in_edges": []
+        },
+        "80": {
+            "out_edges": [
+                70
+            ],
+            "in_edges": []
+        }
+    }
+}
